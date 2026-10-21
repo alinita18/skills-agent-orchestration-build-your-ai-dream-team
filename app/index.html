@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A clear, up-to-date view of project ownership, status, activity, and priority."
+    />
+    <meta name="theme-color" content="#f4f7fb" />
+    <title>Project Pulse</title>
+    <link rel="preload" href="project-data.json" as="fetch" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Project Pulse home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path
+                d="M4 17h6l3.2-8 5.1 15 3.1-7H28"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+              />
+            </svg>
+          </span>
+          <span>mona<span class="brand-divider">/</span>team</span>
+        </a>
+        <div class="topbar-meta">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span>Workspace overview</span>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> TEAM OVERVIEW</p>
+            <h1 id="page-title">Project Pulse<span class="title-period">.</span></h1>
+            <p class="hero-description">
+              A clear view of what the team is building, who’s moving it forward,
+              and where a little attention could make a difference.
+            </p>
+          </div>
+          <div class="hero-aside">
+            <div class="date-card">
+              <span class="date-label">YOUR TEAM, AT A GLANCE</span>
+              <span class="date-value"><span class="live-dot" aria-hidden="true"></span> All systems in view</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="overview" aria-label="Project summary">
+          <div class="overview-item">
+            <span class="overview-icon overview-icon-purple" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="4" width="6" height="6" rx="1.5" />
+                <rect x="14" y="4" width="6" height="6" rx="1.5" />
+                <rect x="4" y="14" width="6" height="6" rx="1.5" />
+                <rect x="14" y="14" width="6" height="6" rx="1.5" />
+              </svg>
+            </span>
+            <span class="overview-copy">
+              <span class="overview-value" id="project-count">—</span>
+              <span class="overview-label">projects tracked</span>
+            </span>
+          </div>
+          <div class="overview-divider" aria-hidden="true"></div>
+          <div class="overview-item">
+            <span class="overview-icon overview-icon-green" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="m5 12.5 4.2 4L19 7" />
+              </svg>
+            </span>
+            <span class="overview-copy">
+              <span class="overview-value" id="active-count">—</span>
+              <span class="overview-label">active projects</span>
+            </span>
+          </div>
+          <div class="overview-divider" aria-hidden="true"></div>
+          <div class="overview-item">
+            <span class="overview-icon overview-icon-amber" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3.8 21 20H3L12 3.8Z" />
+                <path d="M12 9v4.5M12 17h.01" />
+              </svg>
+            </span>
+            <span class="overview-copy">
+              <span class="overview-value" id="attention-count">—</span>
+              <span class="overview-label">need attention</span>
+            </span>
+          </div>
+        </section>
+
+        <section class="projects-section" aria-labelledby="projects-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">THE BIG PICTURE</p>
+              <h2 id="projects-heading">Your projects</h2>
+            </div>
+            <span class="section-caption">A little progress, every day.</span>
+          </div>
+
+          <p class="load-message" id="load-message" role="status" aria-live="polite">
+            <span class="loading-spinner" aria-hidden="true"></span>
+            Loading your projects…
+          </p>
+          <div class="project-grid dashboard" id="project-list" aria-busy="true"></div>
+          <template id="project-card-template">
+            <article class="project-card">
+              <div class="card-top">
+                <span class="status-badge" data-field="status"></span>
+                <span class="priority-badge" data-field="priority">
+                  <span class="priority-dot" aria-hidden="true"></span>
+                  <span data-field="priority-label"></span>
+                </span>
+              </div>
+              <h3 class="project-name" data-field="name"></h3>
+              <p class="project-owner">
+                <span class="owner-avatar" data-field="owner-initial" aria-hidden="true"></span>
+                <span data-field="owner"></span>
+              </p>
+              <p class="project-summary" data-field="summary"></p>
+              <div class="activity">
+                <span class="activity-label">RECENT ACTIVITY</span>
+                <p class="activity-text" data-field="recentActivity"></p>
+              </div>
+            </article>
+          </template>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span><span class="footer-heart" aria-hidden="true">✳</span> Made for teams that move things forward.</span>
+        <span>PROJECT PULSE <span class="footer-dot">·</span> TEAM VIEW</span>
+      </footer>
+    </div>
+  </body>
+</html>

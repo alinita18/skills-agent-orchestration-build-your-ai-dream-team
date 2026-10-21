@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "name": "Atlas onboarding",
+      "owner": "Maya Chen",
+      "status": "active",
+      "recentActivity": "Welcome flow prototype shared with the team · 2h ago",
+      "priority": "high",
+      "summary": "Helping new contributors find their first meaningful win."
+    },
+    {
+      "name": "Community garden",
+      "owner": "Jordan Lee",
+      "status": "on-track",
+      "recentActivity": "Volunteer sign-ups are up 18% this month · 5h ago",
+      "priority": "medium",
+      "summary": "Growing a healthier, more connected neighborhood."
+    },
+    {
+      "name": "Open data toolkit",
+      "owner": "Sam Rivera",
+      "status": "at-risk",
+      "recentActivity": "Partner review moved to next Wednesday · 1d ago",
+      "priority": "high",
+      "summary": "Making local data easier for everyone to understand and use."
+    },
+    {
+      "name": "Learning pathways",
+      "owner": "Alex Morgan",
+      "status": "active",
+      "recentActivity": "First three lesson drafts are ready for feedback · 1d ago",
+      "priority": "medium",
+      "summary": "Creating a clear, welcoming route into open source."
+    },
+    {
+      "name": "Green streets",
+      "owner": "Taylor Brooks",
+      "status": "planned",
+      "recentActivity": "Discovery interviews scheduled with five residents · 2d ago",
+      "priority": "low",
+      "summary": "Exploring small changes that make city streets more livable."
+    },
+    {
+      "name": "Accessibility sprint",
+      "owner": "Priya Patel",
+      "status": "complete",
+      "recentActivity": "Keyboard navigation review wrapped up · 3d ago",
+      "priority": "low",
+      "summary": "Making everyday tools more useful for more people."
+    }
+  ]
+}
